@@ -5,14 +5,18 @@
     </div>
 
     <v-spacer></v-spacer>
-
-    <v-btn
-      href="https://github.com/vuetifyjs/vuetify/releases/latest"
-      target="_blank"
-      text
-    >
-      <span class="mr-2">Print Summary</span>
-      <v-icon>mdi-printer</v-icon>
-    </v-btn>
+    <Modal_Print_Summary />
   </v-app-bar>
 </template>
+<script>
+import Modal_Print_Summary from "@/components/Modal_Print_Summary.vue";
+export default {
+  name: "navbar",
+  data() {
+    return {};
+  },
+  components: {
+    Modal_Print_Summary,
+  },
+};
+</script>

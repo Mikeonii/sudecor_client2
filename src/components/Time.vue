@@ -1,5 +1,5 @@
 <template>
-  <v-card max-width="500" class="pa-10">
+  <v-card max-width="500" class="pa-10 size">
     <v-card-title>
       <h1 class="display-4">{{ time_now }}</h1>
     </v-card-title>
@@ -65,3 +65,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.size {
+  font-size: 32px;
+}
+</style>
