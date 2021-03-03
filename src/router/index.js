@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Summary from '../views/Summary.vue'
+import Profile from '../views/Profile.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/summary',
     name: 'Summary',
     component: Summary
+  },
+  {
+    path: '/profile/:id',
+    name: 'profile',
+    component: Profile
   },
   {
     path: '/about',

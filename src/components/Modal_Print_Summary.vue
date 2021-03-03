@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-btn @click.stop="dialog = true" text>
-      <span class="mr-2">Print Summary</span>
-      <v-icon>mdi-printer</v-icon>
+      <span>Print Summary</span>
+      <v-icon class="pl-2">mdi-printer</v-icon>
     </v-btn>
     <v-dialog v-model="dialog" class="" max-width="400">
       <v-card>
@@ -28,6 +28,7 @@
             placeholder="Please Select Half"
           ></v-select>
           <v-btn color="success" @click="export_excel()">Export</v-btn>
+          <a href=""></a>
         </v-form>
       </v-card>
     </v-dialog>
@@ -69,11 +70,20 @@ export default {
   methods: {
     export_excel() {
       const x = {
-        month: this.month,
+        month: this.months.indexOf(this.month) + 1,
         year: this.year,
         half: this.half,
       };
-      console.log(x);
+      // console.log(x);
+      window.open(
+        "http://localhost:8000/api/attendance/" +
+          x.year +
+          "/" +
+          x.month +
+          "/" +
+          x.half
+      );
+      // this.$router.push("/attendance/" + x.year + "/" + x.month + "/" + x.half);
     },
   },
 };

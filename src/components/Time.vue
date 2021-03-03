@@ -1,13 +1,16 @@
 <template>
-  <v-card max-width="500" class="pa-10 size">
-    <v-card-title>
-      <h1 class="display-4">{{ time_now }}</h1>
-    </v-card-title>
-    <v-divider></v-divider>
-    <v-card-text>
-      Today is: <br />
-      <h1 class="mt-3">{{ month }}, {{ day }} {{ year }}</h1>
-      <v-chip color="green white--text" class="mt-2">{{ full_day }}</v-chip>
+  <v-card class="pa-10 mt-15 text-center">
+    <v-card-text class="mt-15 text-center">
+      <h1>{{ time_now }}</h1>
+      <br />
+      <p class="mt-15">Today is:</p>
+
+      <h2 class=" subtitle">
+        {{ month }}, {{ day }} {{ year }}
+        <v-chip color="green white--text" x-large class="mt-2 subtitle2">{{
+          full_day
+        }}</v-chip>
+      </h2>
     </v-card-text>
   </v-card>
 </template>
@@ -65,8 +68,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.size {
-  font-size: 32px;
-}
-</style>
