@@ -3,7 +3,7 @@
     <v-card class="pa-5">
       <h2>Clients Table</h2>
       <v-row>
-        <v-col cols="8">
+        <v-col cols="7">
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
@@ -46,7 +46,7 @@ export default {
         { text: "ID", value: "id" },
         { text: "Name", value: "name" },
         { text: "Card Number", value: "card_number" },
-        { text: "Department", value: "department" },
+
         { text: "Created at", value: "created_at" },
         { text: "Updated at", value: "updated_at" },
       ],
@@ -63,7 +63,7 @@ export default {
     async get_attendance() {
       await axios.get("/clients").then((response) => {
         this.items = response.data;
-        console.log(response.data);
+        // console.log(response.data);
       });
     },
   },

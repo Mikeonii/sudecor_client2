@@ -15,6 +15,7 @@
       <v-btn router-link to="/summary" class="ml-4"
         >View Attendance Summary</v-btn
       >
+
     </v-row>
   </v-app-bar>
 </template>

@@ -53,6 +53,7 @@ export default {
         { text: "Over Time", value: "over_time" },
         { text: "Holiday", value: "holiday" },
         { text: "Sunday", value: "sunday" },
+        { text: "Night Premium", value: "night_premium" },
       ],
       items: [],
     };
