@@ -75,8 +75,16 @@ export default {
         half: this.half,
       };
       // console.log(x);
+      // window.open(
+      //   "http://localhost:8000/api/attendance/" +
+      //     x.year +
+      //     "/" +
+      //     x.month +
+      //     "/" +
+      //     x.half
+      // );
       window.open(
-        "http://localhost:8000/api/attendance/" +
+        "http://192.168.1.169:8000/api/attendance/" +
           x.year +
           "/" +
           x.month +
