@@ -27,6 +27,7 @@
             >
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
+                  readonly
                   v-model="form.date"
                   label="Please Select Date"
                   hint="YYYY-MM-DD format"
@@ -42,6 +43,14 @@
                 @input="menu1 = false"
               ></v-date-picker>
             </v-menu>
+            <v-select
+              color
+              v-model="form.type"
+              :items="items"
+              filled
+              label="Holiday Type"
+            >
+            </v-select>
           </v-form>
         </v-card-text>
         <v-card-actions class="d-flex">
@@ -60,9 +69,11 @@ export default {
     return {
       holiday_date: false,
       dialog: false,
+      items: ["Special", "Regular"],
       form: {
         holiday_name: "",
         date: "",
+        type: "",
       },
     };
   },

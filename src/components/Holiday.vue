@@ -51,6 +51,7 @@ export default {
         { text: "ID", value: "id" },
         { text: "Holiday Name", value: "holiday_name" },
         { text: "Date", value: "date" },
+        { text: "Type", value: "type" },
       ],
       items: [],
     };

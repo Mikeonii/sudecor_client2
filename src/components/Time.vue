@@ -60,7 +60,7 @@ export default {
           date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
         this.year = date.getFullYear();
         this.month = this.months[date.getMonth()];
-        this.day = date.getUTCDate();
+        this.day = date.getDate();
         this.full_day = this.days[date.getDay()];
         this.timer(date);
       }, 1000);

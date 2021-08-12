@@ -43,6 +43,13 @@
                 @input="menu1 = false"
               ></v-date-picker>
             </v-menu>
+            <v-select
+              color
+              v-model="form.type"
+              :items="items"
+              filled
+              label=""
+            ></v-select>
           </v-form>
         </v-card-text>
         <v-card-actions class="d-flex">
@@ -67,7 +74,9 @@ export default {
         id: this.item.id,
         holiday_name: this.item.holiday_name,
         date: this.item.date,
+        type: this.item.type,
       },
+      items: ["Regular", "Special"],
     };
   },
   methods: {
